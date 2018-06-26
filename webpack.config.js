@@ -9,16 +9,17 @@ const APP_SRC_PATH = path.join(__dirname, 'js/source');
 const PKG = require(path.join(__dirname, 'package.json'));
 const MODULES = PKG.dependencies;
 const EXCLUDED_SRC = /(__tests__|node_modules)/;
+const routerBasename = process.env.MY_APP_ROUTER_BASENAME
 
 
-var fs=require('fs');
+var fs = require('fs');
 
 var nodeModules = {};
 fs.readdirSync('node_modules')
-    .filter(function(x) {
+    .filter(function (x) {
         return ['.bin'].indexOf(x) === -1;
     })
-    .forEach(function(mod) {
+    .forEach(function (mod) {
         nodeModules[mod] = 'commonjs ' + mod;
     });
 
@@ -26,10 +27,10 @@ fs.readdirSync('node_modules')
 module.exports = {
     cache: false,
     context: APP_PATH,
+    mode:'development',
     entry: {
-        App : path.join(APP_PATH, 'App.js')
+        App: path.join(APP_PATH, 'App.js')
     }
-
     ,
     target: 'web',
     output: {
@@ -38,7 +39,7 @@ module.exports = {
         filename: '[name]-bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: EXCLUDED_SRC,
@@ -64,11 +65,18 @@ module.exports = {
             }
         ]
     },
-    
-    plugins:[
+
+    plugins: [
         new webpack.ProvidePlugin({
             "React": "react",
-          }),
+        }),
+        new webpack.DefinePlugin({
+            process: {
+                env: {
+                    ROUTER_BASENAME: JSON.stringify(routerBasename)
+                }
+            }
+        }),
     ],
 
 };
