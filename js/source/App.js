@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
-import MainWindow from '../shared/MainWindow.js';
+import { BrowserRouter } from "react-router-dom";
+import Root from './shared/Root.js';
 
 ReactDOM.render(
   <div className="ComponentContainer">
     <BrowserRouter>
-      <MainWindow />
+      <Root />
     </BrowserRouter>
   </div>,
   document.getElementById('root')

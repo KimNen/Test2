@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class MainWindow extends Component {
+class Store extends Component {
     render() {
         return (
             <div>
-                Hello React-Router
+                StorePage
             </div>
         );
     }
 }
 
-export default MainWindow;
+export default Store;

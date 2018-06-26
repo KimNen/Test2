@@ -2,7 +2,7 @@
   "name": "basic",
   "version": "1.0.0",
   "description": "a",
-  "main": "main.js",
+  "main": "App.js",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
