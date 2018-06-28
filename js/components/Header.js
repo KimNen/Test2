@@ -7,7 +7,7 @@ const Header = () => (
   <header>
     <nav>
       <ul>
-        <li><Link exact href='/'>Home</Link></li>
+        <li><Link href='/'>Home</Link></li>
         <li><Link href='/about'><a>About</a></Link></li>
         <li><Link href='/store'><a>Store</a></Link></li>
       </ul>

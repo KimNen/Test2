@@ -1,7 +1,7 @@
 module.exports =
 __NEXT_REGISTER_PAGE('/about', function() {
           var comp =
-      webpackJsonp([5],{
+      webpackJsonp([4],{
 
 /***/ "./js/components/Footer.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -60,7 +60,6 @@ var Header = function Header() {
       lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
-    exact: true,
     href: "/",
     __source: {
       fileName: _jsxFileName,
@@ -1132,7 +1131,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./pages/about.js");
@@ -1140,7 +1139,7 @@ module.exports = __webpack_require__("./pages/about.js");
 
 /***/ })
 
-},[4])
+},[5])
           return { page: comp.default }
         })
       ;
