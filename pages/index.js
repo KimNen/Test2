@@ -5,7 +5,7 @@ import Footer from '../js/components/Footer'
 export default () => (
     <div>
     <Header/>
-    <div>
+        <div className="contents">
         <h1>Index Page</h1>
     </div>
     <Footer/>

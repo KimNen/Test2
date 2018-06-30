@@ -7,8 +7,16 @@ class about extends React.Component{
         return(
             <div>
             <Header/>
-            <div>
-                <h1>about Page</h1>
+            <div className="contents">
+                <div className="aboutProject">
+                    <br/>
+                    사용 기술<br/>
+                    Framework : Next.js<br/>
+                    Css : bootstrap<br/>
+                    ajax : axios<br/>
+                    Modal Dialog : react-modal<br/>
+                    server : json-server<br/><br/><br/>
+                </div>
             </div>
             <Footer/>
             </div>

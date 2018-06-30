@@ -72,10 +72,10 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/next/dist/pages/_app.js":
+/***/ "./node_modules/next/dist/pages/_document.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("next/app")
+module.exports = __webpack_require__("next/document")
 
 
 /***/ }),
@@ -83,17 +83,17 @@ module.exports = __webpack_require__("next/app")
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./node_modules/next/dist/pages/_app.js");
+module.exports = __webpack_require__("./node_modules/next/dist/pages/_document.js");
 
 
 /***/ }),
 
-/***/ "next/app":
+/***/ "next/document":
 /***/ (function(module, exports) {
 
-module.exports = require("next/app");
+module.exports = require("next/document");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=_app.js.map
+//# sourceMappingURL=_document.js.map

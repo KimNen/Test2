@@ -298,7 +298,7 @@ module.exports = __webpack_require__("./node_modules/next/app.js")
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./node_modules/next/dist/pages/_app.js");
@@ -306,7 +306,7 @@ module.exports = __webpack_require__("./node_modules/next/dist/pages/_app.js");
 
 /***/ })
 
-},[3])
+},[1])
           return { page: comp.default }
         })
       ;

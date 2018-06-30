@@ -1,5 +1,5 @@
 module.exports =
-__NEXT_REGISTER_PAGE('/about', function() {
+__NEXT_REGISTER_PAGE('/', function() {
           var comp =
       webpackJsonp([4],{
 
@@ -9,6 +9,8 @@ __NEXT_REGISTER_PAGE('/about', function() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
 var _jsxFileName = "C:\\Users\\TaeHyun\\Documents\\SourceTree\\Test2Clone\\js\\components\\Footer.js";
 
 
@@ -33,18 +35,17 @@ var Footer = function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__("./node_modules/next/link.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Theme_js__ = __webpack_require__("./js/components/Theme.js");
+
+
 var _jsxFileName = "C:\\Users\\TaeHyun\\Documents\\SourceTree\\Test2Clone\\js\\components\\Header.js";
+
 
  // The Header creates links that can be used to navigate
 // between routes.
 
 var Header = function Header() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("header", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -54,53 +55,106 @@ var Header = function Header() {
       fileName: _jsxFileName,
       lineNumber: 9
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Theme_js__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Button, {
+    bsStyle: "primary",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    }
+  }, "aaa"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     }
   }, "Home")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     }
   }, "About"))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/store",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     }
   }, "Store"))))));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Header);
+
+/***/ }),
+
+/***/ "./js/components/Theme.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("./node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_css_bootstrap_min_css__ = __webpack_require__("./styles/css/bootstrap.min.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_css_bootstrap_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_css_bootstrap_min_css__);
+
+
+var _jsxFileName = "C:\\Users\\TaeHyun\\Documents\\SourceTree\\Test2Clone\\js\\components\\Theme.js";
+
+
+
+
+var Theme = function Theme(_ref) {
+  var children = _ref.children;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: __WEBPACK_IMPORTED_MODULE_2__styles_css_bootstrap_min_css__["default"]
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    }
+  }), children);
+};
+
+Theme.propTypes = {
+  children: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.arrayOf(__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.element), __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.element]).isRequired
+};
+/* harmony default export */ __webpack_exports__["a"] = (Theme);
 
 /***/ }),
 
@@ -1033,82 +1087,52 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./pages/about.js":
+/***/ "./pages/index.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_components_Header__ = __webpack_require__("./js/components/Header.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_components_Footer__ = __webpack_require__("./js/components/Footer.js");
-var _jsxFileName = "C:\\Users\\TaeHyun\\Documents\\SourceTree\\Test2Clone\\pages\\about.js";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__("./node_modules/next/link.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_components_Header__ = __webpack_require__("./js/components/Header.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_components_Footer__ = __webpack_require__("./js/components/Footer.js");
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+var _jsxFileName = "C:\\Users\\TaeHyun\\Documents\\SourceTree\\Test2Clone\\pages\\index.js";
 
 
 
 
-
-var about =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(about, _React$Component);
-
-  function about() {
-    _classCallCheck(this, about);
-
-    return _possibleConstructorReturn(this, (about.__proto__ || Object.getPrototypeOf(about)).apply(this, arguments));
-  }
-
-  _createClass(about, [{
-    key: "render",
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__js_components_Header__["a" /* default */], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9
-        }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      }, "about Page")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__js_components_Footer__["a" /* default */], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      }));
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
     }
-  }]);
-
-  return about;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (about);
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__js_components_Header__["a" /* default */], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    }
+  }, "Index Page")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__js_components_Footer__["a" /* default */], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    }
+  }));
+});
     (function (Component, route) {
       if(!Component) return
       if (false) return
@@ -1125,22 +1149,29 @@ function (_React$Component) {
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/about")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
   
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
-/***/ 5:
+/***/ "./styles/css/bootstrap.min.css":
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: No PostCSS Config found in: C:\\Users\\TaeHyun\\Documents\\SourceTree\\Test2Clone\\styles\\css\n    at Error (native)\n    at C:\\Users\\TaeHyun\\Documents\\SourceTree\\Test2Clone\\node_modules\\postcss-load-config\\index.js:51:26");
+
+/***/ }),
+
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/about.js");
+module.exports = __webpack_require__("./pages/index.js");
 
 
 /***/ })
 
-},[5])
+},[3])
           return { page: comp.default }
         })
       ;
-//# sourceMappingURL=about.js.map
+//# sourceMappingURL=index.js.map

@@ -8536,7 +8536,12 @@ function () {
       var _as$split = as.split('#'),
           _as$split2 = (0, _slicedToArray2.default)(_as$split, 2),
           newUrlNoHash = _as$split2[0],
-          newHash = _as$split2[1]; // If the urls are change, there's more than a hash change
+          newHash = _as$split2[1]; // Makes sure we scroll to the provided hash if the url/hash are the same
+
+
+      if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
+        return true;
+      } // If the urls are change, there's more than a hash change
 
 
       if (oldUrlNoHash !== newUrlNoHash) {
@@ -8554,7 +8559,13 @@ function () {
     value: function scrollToHash(as) {
       var _as$split3 = as.split('#'),
           _as$split4 = (0, _slicedToArray2.default)(_as$split3, 2),
-          hash = _as$split4[1];
+          hash = _as$split4[1]; // Scroll to top if the hash is just `#` with no value
+
+
+      if (hash === '') {
+        window.scrollTo(0, 0);
+        return;
+      }
 
       var el = document.getElementById(hash);
 

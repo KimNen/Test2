@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server -p 9000 --watch db.json",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -18,15 +19,52 @@
   "bugs": {
     "url": "https://github.com/KimNen/Test2/issues"
   },
+  "keywords": [
+    "react",
+    "next",
+    "zeit",
+    "next.js",
+    "next js",
+    "now",
+    "redux",
+    "react-redux",
+    "ES6",
+    "ES7",
+    "ES8",
+    "ES2015",
+    "ES2016",
+    "ES2017",
+    "bootstrap",
+    "starter",
+    "persist",
+    "redux-persist",
+    "hot-reload"
+  ],
   "homepage": "https://github.com/KimNen/Test2#readme",
   "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "css-loader": "^0.28.11",
     "next": "^6.1.0",
+    "postcss-loader": "^2.1.5",
     "react": "^16.4.1",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-addons-transition-group": "^15.5.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
-    "react-virtualized": "^9.20.0"
+    "react-transition-group": "^1.1.2",
+    "react-virtualized": "^9.20.0",
+    "style-loader": "^0.21.0",
+    "styled-jsx": "^2.2.7"
   },
   "devDependencies": {
-    "axios": "^0.18.0"
+    "@types/react-bootstrap": "^0.31.4",
+    "axios": "^0.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "extract-text-webpack-plugin": "^3.0.2"
   }
 }

@@ -1,10 +1,13 @@
 import React from 'react'
 import Header from '../js/components/Header'
 import Footer from '../js/components/Footer'
-import { Grid, Row, Col, code } from 'react-bootstrap'
+import Link from 'next/link';
 import axios from 'axios'
 import StoreCell from '../js/components/StoreCell'
+import Modal from 'react-modal';
 import fetch from 'isomorphic-unfetch';
+
+Modal.setAppElement('#modal')
 
 class store extends React.Component {
 
@@ -14,13 +17,18 @@ class store extends React.Component {
         this.state = {
             DetailView: false,
             StoreList: [],
-            SelectIdx : undefined,
+            SelectIdx: undefined,
         }
 
-        this.GridLayout ={
-            minHeight:"700px",
-            display : "grid",
-            gridTemplateColumns:" 210px 210px 210px",
+        this.GridLayout = {
+            minHeight: "700px",
+            display: "grid",
+            gridTemplateColumns: "210px 210px 210px",
+        }
+
+        this.customStyle = {
+            webkitTransform: "translate(0.25)"
+
         }
 
     }
@@ -36,23 +44,72 @@ class store extends React.Component {
     CellSelect(idx) {
         this.setState({
             DetailView: !this.state.DetailView,
-            SelectIdx : !this.state.DetailView?idx:undefined
+            SelectIdx: idx
         })
     }
 
+    closeModal() {
+        this.setState({
+            DetailView: !this.state.DetailView,
+            SelectIdx: undefined,
+        })
+    }
+
+    storeUrlButtonClick(url) {
+        if (url === undefined) {
+            return alert("등록된 주소가 없습니다");
+        } else {
+            console.log("storeUrlButtonClick", url)
+        }
+    }
+
     render() {
-        const StoreList = this.props.StoreList.map(
-            CurrentValue => <StoreCell CellClick={this.CellSelect.bind(this)} data={CurrentValue} />
-        
+
+        let { DetailView, SelectIdx } = this.state;
+        let { StoreList } = this.props;
+
+        const StoreListArr = StoreList.map(
+            CurrentValue => <StoreCell key={CurrentValue.id} CellClick={this.CellSelect.bind(this)} data={CurrentValue} />
+
         )
         return (
             <div className="store">
                 <Header />
-                <div style={this.GridLayout}>
-                    {StoreList}
+                <div className="list">
+                    <div style={this.GridLayout}>
+                        {StoreListArr}
+                    </div>
                 </div>
+                {this.state.DetailView ?
+                    <Modal
+                        isOpen={this.state.DetailView}
+                        onRequestClose={this.closeModal.bind(this)}
+                    >
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 className="modal-title">
+                                    {StoreList[SelectIdx].name}
+                                </h4>
+                                <button className="close" onClick={this.closeModal.bind(this)}>x</button>
+
+                            </div>
+                            <div className="storeImg">
+                                <img src={StoreList[SelectIdx].image} />
+                            </div>
+                            <div className="modal-body">
+                                {StoreList[SelectIdx].description}
+                            </div>
+                            <div className="modal-footer">
+                                <a href={StoreList[SelectIdx].url}>
+                                    {StoreList[SelectIdx].url !== undefined ?
+                                        "가게 홈페이지 보기"
+                                        : null}
+                                </a>
+                            </div>
+                        </div>
+                    </Modal>
+                    : null}
                 <Footer />
-                {this.state.DetailView ? <StoreDetailView data={this.state.SelectIdx}/>: null }
             </div>
         )
     }

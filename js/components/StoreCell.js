@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../style.css'
 
 class StoreCell extends React.Component{
 
@@ -8,13 +9,18 @@ class StoreCell extends React.Component{
         this.state = {
 
         }
-        console.log("StoreCell constructor",this.props.data)
+    }
+
+    CellSelect(idx){
+        this.props.CellClick(idx);
     }
 
     render(){
         return(
-            <div className="StoreCell">
-                <img src={this.props.data.thumb}/>
+            <div className="StoreCell"
+                onClick={this.CellSelect.bind(this,this.props.data.id-1)}
+            >
+                <img className="cursorpoint" src={this.props.data.thumb}/>
             </div>
         )
     }

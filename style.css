@@ -1,0 +1,61 @@
+.cursorpoint{
+    cursor: pointer;
+}
+header{
+  width:100%;
+  margin-bottom:30px;
+}
+
+.contents{
+  display : -webkit-box;
+  -webkit-box-pack : center;
+}
+
+footer{
+  height:50px;
+  color:white;
+  background-color:black;
+  display : -webkit-box;
+  -webkit-box-pack : center;
+  -webkit-box-align : center;
+}
+
+.list{
+  display : -webkit-box;
+  -webkit-box-pack : center;
+}
+
+
+.closebutton{
+  display: -webkit-box;
+  -webkit-box-pack: end;
+  margin-bottom:20px;
+
+}
+
+.storeImg{
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  margin-bottom:20px;
+}
+
+.storetitle{
+  font-size:20px;
+  font-weight: 700;
+  margin-bottom:20px;
+}
+
+.storedescription{
+  margin-bottom:20px;
+}
+
+.ErrorText{
+  text-align: center;
+}
+
+.aboutProject{
+  width:250px;
+  border:1px solid gray;
+  margin-bottom : 20px;
+  padding-left : 25px;
+}
